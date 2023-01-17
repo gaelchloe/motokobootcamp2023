@@ -1,7 +1,5 @@
 1. How much is the current memory capacity of a canister?
-   
     The curent memory capacity of a canister is 256TB.
-
 
 2. What is the issue with the following code sample?
 
@@ -14,7 +12,7 @@
 
 #Problem detected
 
-    We can't use the ":=" operator to increment the value of the "counter" variable. In Motoko the ":=" operator is used for variable re-assignment, not for incrementing the value.
+We can't use the ":=" operator to increment the value of the "counter" variable. In Motoko the ":=" operator is used for variable re-assignment, not for incrementing the value.
 
 #Possible solution:
 
@@ -42,7 +40,7 @@
 
 #Problem detected
 
-    In the first line, it's trying to assign an integer value (0) to a variable of type Text. 
+In the first line, it's trying to assign an integer value (0) to a variable of type Text. 
 
 #Possible solution:
 
@@ -60,5 +58,4 @@
 
 
 4. False or True: we can remove the keyword async for return argument of a query function since queries are faster to answer.
-    
     False
