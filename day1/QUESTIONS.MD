@@ -2,17 +2,9 @@
 
         The curent memory capacity of a canister is 256TB.
 
-<<<<<<< HEAD
-         actor {
-            let counter : Nat = 0;
-            public func increment_counter() : async () {
-             counter := counter + 1;
-            };
-        }
-=======
+
 
 2. 
->>>>>>> refs/remotes/origin/main
 
 #Problem detected
 
@@ -28,21 +20,7 @@ We can't use the ":=" operator to increment the value of the "counter" variable.
     }
 
 
-
-<<<<<<< HEAD
-    actor {
-        var message : Text = 0;
-         public query func change_message(new_message : Text) : async () {
-            message := new_message;
-            return;
-        };
-        public query func see_message() : async Text {
-            return(message);
-         };
-    }
-=======
 3.
->>>>>>> refs/remotes/origin/main
 
 #Problem detected
 
