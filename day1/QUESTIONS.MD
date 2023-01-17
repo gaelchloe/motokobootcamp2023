@@ -2,14 +2,8 @@
 
         The curent memory capacity of a canister is 256TB.
 
-2. What is the issue with the following code sample?
 
-    actor {
-        let counter : Nat = 0;
-        public func increment_counter() : async () {
-             counter := counter + 1;
-        };
-    }
+2. 
 
 #Problem detected
 
@@ -25,18 +19,8 @@ We can't use the ":=" operator to increment the value of the "counter" variable.
     }
 
 
-3. What is the issue with the following code sample?
 
-    actor {var message : Text = 0;
-            public query func change_message(new_message : Text) : async () {
-            message := new_message;
-            return;
-        };
-  
-        public query func see_message() : async Text {
-            return(message);
-         };
-    }
+3.
 
 #Problem detected
 
