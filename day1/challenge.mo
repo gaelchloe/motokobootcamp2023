@@ -16,7 +16,7 @@ actor {
 }
 
 actor {
-
+    
     //hours_to_minutes
     public query func hours_to_minutes(h : Nat) : async Nat {
         return h * 60;
