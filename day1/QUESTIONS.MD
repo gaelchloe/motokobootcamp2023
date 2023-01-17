@@ -1,5 +1,6 @@
 1. How much is the current memory capacity of a canister?
-    The curent memory capacity of a canister is 256TB.
+
+        The curent memory capacity of a canister is 256TB.
 
 2. What is the issue with the following code sample?
 
@@ -16,7 +17,7 @@ We can't use the ":=" operator to increment the value of the "counter" variable.
 
 #Possible solution:
 
-     actor {
+    actor {
         let counter : Nat = 0;
         public func increment_counter() : async () {
              counter += 1;
@@ -26,9 +27,8 @@ We can't use the ":=" operator to increment the value of the "counter" variable.
 
 3. What is the issue with the following code sample?
 
-    actor {
-        var message : Text = 0;
-         public query func change_message(new_message : Text) : async () {
+    actor {var message : Text = 0;
+            public query func change_message(new_message : Text) : async () {
             message := new_message;
             return;
         };
@@ -58,4 +58,5 @@ In the first line, it's trying to assign an integer value (0) to a variable of t
 
 
 4. False or True: we can remove the keyword async for return argument of a query function since queries are faster to answer.
-    False
+            
+            False
