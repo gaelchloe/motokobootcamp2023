@@ -1,0 +1,36 @@
+contract DAO {
+    // Define a mapping to store the balance of each member
+    mapping(address => int) public memberBalances;
+
+    // Define a mapping to store the voting power of each member
+    mapping(address => int) public memberVotingPower;
+
+    // Define a struct to store proposal information
+    struct Proposal {
+        address proposer;
+        int votingPowerFor;
+        int votingPowerAgainst;
+        string webpageText;
+    }
+
+    // Define an array to store proposals
+    Proposal[] public proposals;
+
+    // A function to allow members to create a proposal
+    public func createProposal(string newWebpageText) {
+        require(memberBalances[msg.sender] > 0, "You must hold at least one MB token to create a proposal");
+        Proposal storage newProposal = proposals.push(Proposal({
+            proposer: msg.sender,
+            votingPowerFor: memberVotingPower[msg.sender],
+            votingPowerAgainst: 0,
+            webpageText: newWebpageText
+        }));
+    }
+
+    // A function to allow members to vote on a proposal
+    public func vote(int proposalIndex, bool voteFor) {
+        require(memberBalances[msg.sender] > 0, "You must hold at least one MB token to vote");
+        Proposal storage proposal = proposals[proposalIndex];
+        if(voteFor) {
+        }
+        
