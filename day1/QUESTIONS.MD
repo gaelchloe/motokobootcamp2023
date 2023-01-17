@@ -39,22 +39,21 @@ actor {
         #Problem detected
         in the first line, it's trying to assign an integer value (0) to a variable of type Text. 
 
-        #Possible solution:
+#Possible solution:
+    actor {
+        var message : Text = "";
 
-actor {
-  var message : Text = "";
-
-  public query func change_message(new_message : Text) : async () {
-    message := new_message;
-    return;
-  };
+        public query func change_message(new_message : Text) : async () {
+            message := new_message;
+            return;
+        };
   
-  public query func see_message() : async Text {
-    return(message);
-  };
-}
+        public query func see_message() : async Text {
+            return(message);
+        };
+    }
 
 
 4. False or True: we can remove the keyword async for return argument of a query function since queries are faster to answer.
-
-        False
+    
+    False
